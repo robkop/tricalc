@@ -125,13 +125,31 @@ document.getElementById('4next').addEventListener("click",function(){
   localStorage.setItem('run',timeInSec);
   var realTime = sekundyToTime(timeInSec);
 
-  var pace = (+x) / ((+timeInSec)/60/60);
+  var speed = (+x) / ((+timeInSec)/60)/60;
+  var pace = 60 / speed;
+  var pace = sekundyToTime(pace);
   display.style.display = "block";
   document.getElementById('runtimetot').innerHTML = realTime;
-  document.getElementById('runpace').innerHTML = pace + " km/h";
+  document.getElementById('runpace').innerHTML = pace.slice(0,5) + " min/km <br> <h4>Your speed is:</h4><p>" + (speed * 60 * 60).toFixed(2) + " km/h</p>";
 })
 
+document.getElementById('showfinishtime').addEventListener("click",function(){
+  var display = document.getElementById('finishrow');
+  var xs = document.getElementById('stbmin').value * 60;
+  var xm = document.getElementById('stbsec').value;
+  var ys = document.getElementById('btrmin').value * 60;
+  var ym = document.getElementById('btrsec').value;
+  var transTime = (+xs) + (+xm) + (+ys) + (+ym);
+  localStorage.setItem("trans",transTime);
+  var swim = localStorage.getItem("swim");
+  var bike = localStorage.getItem("bike");
+  var run = localStorage.getItem("run");
+  var finishTime = (+transTime) + (+run) + (+swim) + (+bike);
+  display.style.display = "block";
+  display.style.textAlign = "center";
+  document.getElementById('finishtimetot').innerHTML = sekundyToTime(finishTime);
 
+})
 
 
 

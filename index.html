@@ -129,7 +129,7 @@
 
       </div>
       <div class="cole-sm12 collapse" id="changetimefield">
-        <h2>Change</h2>
+        <h2>Transitions</h2>
         <div class="well well-lg">
           <h3>Swim to bike</h3>
           <form>
@@ -150,7 +150,7 @@
             <label for="btrsec">Seconds:</label>
             <input type="number" class="form-control" id="btrsec" min="0">
           </div>
-          <button type="button" class="btn btn-success" data-target="#results">Show results</button>
+          <button type="button" class="btn btn-success" data-target="#results" id="showfinishtime">Show results</button>
         </div>
         </form>
     </div>
@@ -178,9 +178,9 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-12" style="display:none">
-        <h3>Your estimated finish time:</h3>
-        <p id="finishtimetot"></p>
+      <div class="col-sm-12" style="display:none" id="finishrow">
+        <h1>Your estimated finish time:</h1>
+        <h1 id="finishtimetot"></h1>
       </div>
     </div>
     <footer>
