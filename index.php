@@ -11,11 +11,9 @@
 </head>
 
 <body>
-  <div class="jumbotron text-center">
-    <h1>Triathlon Calculator</h1>
-    <p>Try it! Check you time and race pace!</p>
-  </div>
+  <?php include 'elements/head.php'; ?>
   <div class="container">
+    <?php include 'elements/nav.php'; ?>
     <div class="row">
     <div class="jumbotron">
         <h2>Select distance</h2>
@@ -70,15 +68,15 @@
             <form>
               <div class="form-group">
                 <label for="swimho">Hours:</label>
-                <input type="number" class="form-control" id="swimho" min="0">
+                <input type="number" class="form-control dsb3" id="swimho" min="0">
               </div>
               <div class="form-group">
                 <label for="swimmin">Mintues:</label>
-                <input type="number" class="form-control" id="swimmin" min="0">
+                <input type="number" class="form-control dsb3" id="swimmin" min="0">
               </div>
               <div class="form-group">
                 <label for="swimsec">Seconds:</label>
-                <input type="number" class="form-control" id="swimsec" min="0">
+                <input type="number" class="form-control dsb3" id="swimsec" min="0">
               </div>
               <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#biketimefield" id="2next">Next</button>
           </div>
@@ -182,10 +180,8 @@
         <h1 id="finishtimetot"></h1>
       </div>
     </div>
-    <footer>
-      <div class="row well"> Robert Kopydłowski 2017
-      </div>
-    </footer>
+    <?php include 'elements/nav.php'; ?>
+    <?php include 'elements/footer.php'; ?>
   </div>
   <script src="scripts/tricalc.js"></script>
 </body>

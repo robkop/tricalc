@@ -162,11 +162,6 @@ document.getElementById('showfinishtime').addEventListener("click",function(){
 
 })
 
-
-
-
-
-
 function sekundyToTime(n) {
   return (new Date(n * 1000)).toUTCString().match(/(\d\d:\d\d:\d\d)/)[0];
     }
