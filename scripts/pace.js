@@ -154,9 +154,10 @@ document.getElementById('showfinishtime').addEventListener("click",function(){
   var bike = localStorage.getItem("bikep");
   var run = localStorage.getItem("runp");
   var finishTime = (+transTime) + (+run) + (+swim) + (+bike);
-  display.style.display = "block";
-  display.style.textAlign = "center";
-  document.getElementById('finishtimetot').innerHTML = sekundyToTime(finishTime);
+
+    display.style.display = "block";
+    display.style.textAlign = "center";
+    document.getElementById('finishtimetot').innerHTML = sekundyToTime(finishTime);
 
 })
 

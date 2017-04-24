@@ -1,4 +1,4 @@
 <footer>
-  <div class="row well"> Robert Kopydłowski 2017
+  <div class="row well"> <a href="me.php">Robert Kopydłowski 2017</a>
   </div>
 </footer>

@@ -167,10 +167,14 @@ document.getElementById('showfinishtime').addEventListener("click",function(){
   var bike = localStorage.getItem("bike");
   var run = localStorage.getItem("run");
   var finishTime = (+transTime) + (+run) + (+swim) + (+bike);
-  display.style.display = "block";
-  display.style.textAlign = "center";
-  document.getElementById('finishtimetot').innerHTML = sekundyToTime(finishTime);
 
+  if (finishTime <=0) {
+    alert("owww.. you ignored all my suggestions...")
+  } else {
+    display.style.display = "block";
+    display.style.textAlign = "center";
+    document.getElementById('finishtimetot').innerHTML = sekundyToTime(finishTime);
+  }
 })
 
 function sekundyToTime(n) {
