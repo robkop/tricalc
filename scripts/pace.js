@@ -82,7 +82,23 @@ document.getElementById('a6').addEventListener("change",function(){
      rundistance.disabled = false;
   }
 })
+document.getElementById('2next').addEventListener("click",function(){
+  var x = document.getElementById('swimdistance').value;
+  var m = document.getElementById('swimmin').value;
+  var s = document.getElementById('swimsec').value;
+  var display = document.getElementById('swimresult1');
 
+  var timeInSec = ((+m)*60) + (+s);
+  var swimtimep = ((+x) / 100) * timeInSec;
+  localStorage.setItem('swimp',swimtimep);
+  var realTime = sekundyToTime(swimtimep);
+  if (timeInSec <= 0){
+    alert("Something went wrong!");
+  } else {
+    display.style.display = "block";
+    document.getElementById('swimtimetot').innerHTML = realTime;
+  }
+})
 document.getElementById('1next').addEventListener('click',function(){
   var inputs = document.getElementsByTagName('input');
   for(var i = 0; i < inputs.length; i++)
@@ -93,68 +109,39 @@ document.getElementById('1next').addEventListener('click',function(){
         }
   }
 })
-document.getElementById('2next').addEventListener("click",function(){
-  var x = document.getElementById('swimdistance').value;
-  var h = document.getElementById('swimho').value;
-  var m = document.getElementById('swimmin').value;
-  var s = document.getElementById('swimsec').value;
-  var display = document.getElementById('swimresult1');
 
-  var timeInSec = ((+h)*60*60) + ((+m)*60) + (+s);
-  localStorage.setItem('swim',timeInSec);
-  var realTime = sekundyToTime(timeInSec);
-
-  var pace = (100 * (+timeInSec)) / x;
-  if (timeInSec <= 0){
-    alert("Something went wrong!");
-  } else {
-    display.style.display = "block";
-    document.getElementById('swimtimetot').innerHTML = realTime;
-    document.getElementById('swimpace').innerHTML = sekundyToTime(pace) + " / 100 m";
-  }
-})
 document.getElementById('3next').addEventListener("click",function(){
   var x = document.getElementById('bikedistance').value;
-  var h = document.getElementById('bikeho').value;
-  var m = document.getElementById('bikemin').value;
-  var s = document.getElementById('bikesec').value;
+  var avg = document.getElementById('bikeavg').value;
   var display = document.getElementById('bikeresult1');
 
-  var timeInSec = ((+h)*60*60) + ((+m)*60) + (+s);
-  localStorage.setItem('bike',timeInSec);
-  var realTime = sekundyToTime(timeInSec);
+  var bikepTime = ((+x)*3600)/(+avg);
+  localStorage.setItem('bikep',bikepTime);
+  var realTime = sekundyToTime(bikepTime);
 
-  if (timeInSec <= 0){
+  if (bikepTime <= 0){
     alert("Something went wrong!");
   } else {
-  var pace = (+x) / ((+timeInSec)/60/60);
   display.style.display = "block";
   document.getElementById('biketimetot').innerHTML = realTime;
-  document.getElementById('bikepace').innerHTML = pace + " km/h";
   }
 })
 document.getElementById('4next').addEventListener("click",function(){
   var x = document.getElementById('rundistance').value;
-  var h = document.getElementById('runho').value;
   var m = document.getElementById('runmin').value;
   var s = document.getElementById('runsec').value;
   var display = document.getElementById('runresult1');
 
-  var timeInSec = ((+h)*60*60) + ((+m)*60) + (+s);
-  localStorage.setItem('run',timeInSec);
+  var timeInSec = (((+m)*60) + (+s))*x;
+  localStorage.setItem('runp',timeInSec);
   var realTime = sekundyToTime(timeInSec);
   if (timeInSec <= 0){
     alert("Something went wrong!");
   } else {
-  var speed = (+x) / ((+timeInSec)/60)/60;
-  var pace = 60 / speed;
-  var pace = sekundyToTime(pace);
   display.style.display = "block";
   document.getElementById('runtimetot').innerHTML = realTime;
-  document.getElementById('runpace').innerHTML = pace.slice(0,5) + " min/km <br> <h4>Your speed is:</h4><p>" + (speed * 60 * 60).toFixed(2) + " km/h</p>";
   }
 })
-
 document.getElementById('showfinishtime').addEventListener("click",function(){
   var display = document.getElementById('finishrow');
   var xs = document.getElementById('stbmin').value * 60;
@@ -163,9 +150,9 @@ document.getElementById('showfinishtime').addEventListener("click",function(){
   var ym = document.getElementById('btrsec').value;
   var transTime = (+xs) + (+xm) + (+ys) + (+ym);
   localStorage.setItem("trans",transTime);
-  var swim = localStorage.getItem("swim");
-  var bike = localStorage.getItem("bike");
-  var run = localStorage.getItem("run");
+  var swim = localStorage.getItem("swimp");
+  var bike = localStorage.getItem("bikep");
+  var run = localStorage.getItem("runp");
   var finishTime = (+transTime) + (+run) + (+swim) + (+bike);
   display.style.display = "block";
   display.style.textAlign = "center";

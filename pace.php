@@ -9,7 +9,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
-  <?php $page = 'home'?>
+  <?php $page = 'pace'?>
 </head>
 
 <body>
@@ -65,13 +65,9 @@
           <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#swimtimefield" id="1next">Next</button>
         </div>
         <div class="cole-sm12 collapse" id="swimtimefield">
-          <h2>Swim time</h2>
+          <h2>Swim pace [min/100m]</h2>
           <div class="well well-lg">
             <form>
-              <div class="form-group">
-                <label for="swimho">Hours:</label>
-                <input type="number" class="form-control dsb3" id="swimho" min="0">
-              </div>
               <div class="form-group">
                 <label for="swimmin">Mintues:</label>
                 <input type="number" class="form-control dsb3" id="swimmin" min="0">
@@ -86,34 +82,21 @@
 
         </div>
         <div class="cole-sm12 collapse" id="biketimefield">
-          <h2>Bike time</h2>
+          <h2>Bike AVG speed [km/h]</h2>
           <div class="well well-lg">
             <form>
               <div class="form-group">
-                <label for="bikeho">Hours:</label>
-                <input type="number" class="form-control" id="bikeho" min="0">
-              </div>
-              <div class="form-group">
-                <label for="bikemin">Mintues:</label>
-                <input type="number" class="form-control" id="bikemin" min="0">
-              </div>
-              <div class="form-group">
-                <label for="bikesec">Seconds:</label>
-                <input type="number" class="form-control" id="bikesec" min="0">
+                <label for="bikeavg"></label>
+                <input type="number" class="form-control" id="bikeavg" min="0">
               </div>
               <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#runtimefield" id="3next">Next</button>
           </div>
           </form>
-
         </div>
         <div class="cole-sm12 collapse" id="runtimefield">
-          <h2>Run time</h2>
+          <h2>Run pace [min/km]</h2>
           <div class="well well-lg">
             <form>
-              <div class="form-group">
-                <label for="runho">Hours:</label>
-                <input type="number" class="form-control" id="runho" min="0">
-              </div>
               <div class="form-group">
                 <label for="runmin">Mintues:</label>
                 <input type="number" class="form-control" id="runmin" min="0">
@@ -158,22 +141,16 @@
       <div class="col-sm-4" style="display:none" id="swimresult1">
         <h3>Your estimated swim time:</h3>
         <p id="swimtimetot"></p>
-        <h4>Your swim pace is:</h4>
-        <p id="swimpace"></p>
       </div>
 
       <div class="col-sm-4" style="display:none" id="bikeresult1">
         <h3>Your estimated bike time</h3>
         <p id="biketimetot"></p>
-        <h4>Your bike AVG speed is:</h4>
-        <p id="bikepace"></p>
       </div>
 
       <div class="col-sm-4" style="display:none" id="runresult1">
         <h3>Your estimated run time:</h3>
         <p id="runtimetot"></p>
-        <h4>Your run pace is:</h4>
-        <p id="runpace"></p>
       </div>
     </div>
     <div class="row">
@@ -184,7 +161,7 @@
     </div>
     <?php include 'elements/footer.php'; ?>
   </div>
-  <script src="scripts/tricalc.js"></script>
+  <script src="scripts/pace.js"></script>
 </body>
 
 </html>
