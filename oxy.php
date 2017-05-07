@@ -31,7 +31,7 @@
         </div>
       </div>
     <div class="row" id="call">
-      <div class="col-sm-12 text-center" style="display:none" id="finishrow">
+      <div class="col-sm-12 text-center well well-lg" style="display:none" id="finishrow">
         <h1>Your VO<sup>2</sup> MAX is:</h1>
         <h1 id="result"></h1>
       </div>

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Triathlon Calculator - VO2MAX</title>
+  <title>Triathlon Calculator - converter</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -55,11 +55,11 @@
         </div>
       </div>
     <div class="row" id="call1">
-      <div class="col-sm-12 text-center" style="display:none" id="paceToSpeed">
+      <div class="col-sm-12 text-center well well-lg" style="display:none" id="paceToSpeed">
         <h1 id="result"></h1>
       </div>
       <div class="row" id="call2">
-        <div class="col-sm-12 text-center" style="display:none" id="speedToPace">
+        <div class="col-sm-12 text-center well well-lg" style="display:none" id="speedToPace">
           <h1 id="result2"></h1>
         </div>
       </div>

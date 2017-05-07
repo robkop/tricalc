@@ -155,21 +155,21 @@
     </div>
 
     <div class="row" id="results">
-      <div class="col-sm-4" style="display:none" id="swimresult1">
+      <div class="col-sm-4 well well-lg" style="display:none" id="swimresult1">
         <h3>Your estimated swim time:</h3>
         <p id="swimtimetot"></p>
         <h4>Your swim pace is:</h4>
         <p id="swimpace"></p>
       </div>
 
-      <div class="col-sm-4" style="display:none" id="bikeresult1">
+      <div class="col-sm-4 well well-lg" style="display:none" id="bikeresult1">
         <h3>Your estimated bike time</h3>
         <p id="biketimetot"></p>
         <h4>Your bike AVG speed is:</h4>
         <p id="bikepace"></p>
       </div>
 
-      <div class="col-sm-4" style="display:none" id="runresult1">
+      <div class="col-sm-4 well well-lg" style="display:none" id="runresult1">
         <h3>Your estimated run time:</h3>
         <p id="runtimetot"></p>
         <h4>Your run pace is:</h4>
@@ -177,7 +177,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-12" style="display:none" id="finishrow">
+      <div class="col-sm-12 well well-lg" style="display:none" id="finishrow">
         <h1>Your estimated finish time:</h1>
         <h1 id="finishtimetot"></h1>
       </div>

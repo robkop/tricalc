@@ -130,7 +130,7 @@ document.getElementById('3next').addEventListener("click",function(){
   var pace = (+x) / ((+timeInSec)/60/60);
   display.style.display = "block";
   document.getElementById('biketimetot').innerHTML = realTime;
-  document.getElementById('bikepace').innerHTML = pace + " km/h";
+  document.getElementById('bikepace').innerHTML = pace.toFixed(2) + " km/h";
   }
 })
 document.getElementById('4next').addEventListener("click",function(){
