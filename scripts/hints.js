@@ -18,7 +18,7 @@ function workWithData(xml){
   var title = document.getElementById('title');
   var txt = document.getElementById('txt');
   title.innerHTML = x[randomNumber].getElementsByTagName('title')[0].childNodes[0].nodeValue
-  txt.innerHTML = x[randomNumber].getElementsByTagName('title')[0].childNodes[0].nodeValue
+  txt.innerHTML = x[randomNumber].getElementsByTagName('text')[0].childNodes[0].nodeValue
 }
 
 document.getElementById('btn').addEventListener('click',function(){

@@ -3,12 +3,7 @@
 
 <head>
   <title>Triathlon Calculator - VO2MAX</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <?php include 'elements/header.php'; ?>
   <?php $page = 'vo2max'?>
 </head>
 
@@ -24,7 +19,7 @@
           <form>
             <div class="form-group">
               <label for="cooperdist">Your Cooper Test result [m]:</label>
-              <input type="numer" class="form-control" id="cooperdist" min="1">
+              <input type="number" class="form-control" id="cooperdist" min="1">
             </div>
           </form>
           <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#finishrow" id="showbtn">Show result</button>
